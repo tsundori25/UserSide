@@ -6,10 +6,16 @@ import { BracketComponent } from './bracket/bracket.component';
 import { DaftarComponent } from './daftar/daftar.component';
 import { InformasiComponent } from './informasi/informasi.component';
 import { PesertaComponent } from './peserta/peserta.component';
+import { BalapKarungComponent } from './balap-karung.component';
 
 
 @NgModule({
-  declarations: [BracketComponent, DaftarComponent, InformasiComponent, PesertaComponent],
+  declarations: [
+    BalapKarungComponent,
+    BracketComponent, 
+    DaftarComponent, 
+    InformasiComponent, 
+    PesertaComponent],
   imports: [
     CommonModule,
     BalapKarungRoutingModule

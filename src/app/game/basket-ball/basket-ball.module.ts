@@ -6,10 +6,17 @@ import { BracketComponent } from './bracket/bracket.component';
 import { DaftarComponent } from './daftar/daftar.component';
 import { InformasiComponent } from './informasi/informasi.component';
 import { PesertaComponent } from './peserta/peserta.component';
+import { BasketBallComponent } from './basket-ball.component';
 
 
 @NgModule({
-  declarations: [BracketComponent, DaftarComponent, InformasiComponent, PesertaComponent],
+  declarations: [
+    BasketBallComponent,
+    BracketComponent, 
+    DaftarComponent, 
+    InformasiComponent, 
+    PesertaComponent
+  ],
   imports: [
     CommonModule,
     BasketBallRoutingModule
