@@ -1,0 +1,28 @@
+.footer{    
+    background-color: black;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+    height: 20vh;
+}
+.footer .about{
+    color: white;
+    font-family: 'Times New Roman';
+}
+
+.tags .tag{
+    background: linear-gradient(to top left, #3333ff 0%, #00ff99 100%);
+    padding: .5rem;
+    border-radius: 3rem;
+    margin: .5rem;
+}
+
+.tags{
+    margin-top: 4rem;
+}
+
+.tags .tag a{
+    color: black;
+    font-family: 'Times New Roman';
+}
