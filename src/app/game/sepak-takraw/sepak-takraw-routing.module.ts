@@ -1,15 +1,16 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { BadmintonComponent } from './badminton.component';
-import { BracketComponent } from './bracket/bracket.component';
-import { DaftarComponent } from './daftar/daftar.component';
-import { InformasiComponent } from './informasi/informasi.component';
-import { PesertaComponent } from './peserta/peserta.component';
+import { BracketComponent } from '../badminton/bracket/bracket.component';
+import { DaftarComponent } from '../badminton/daftar/daftar.component';
+import { InformasiComponent } from '../badminton/informasi/informasi.component';
+import { PesertaComponent } from '../badminton/peserta/peserta.component';
+
+import { SepakTakrawComponent } from './sepak-takraw.component';
 
 const routes: Routes = [
   {
     path:'',
-    component:BadmintonComponent,
+    component:SepakTakrawComponent,
     children:[
       {
         path:'peserta',
@@ -35,4 +36,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class BadmintonRoutingModule { }
+export class SepakTakrawRoutingModule { }

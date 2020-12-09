@@ -9,6 +9,7 @@ import { RegisterComponent } from './admin/register/register.component';
 import { HomeComponent } from './home/home.component';
 import { BannerComponent } from './banner/banner.component';
 import { FooterComponent } from './footer/footer.component';
+import { GameComponent } from './game/game.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,9 @@ import { FooterComponent } from './footer/footer.component';
     HomeComponent,
     BannerComponent,
     FooterComponent,
+    GameComponent
+ 
+
   ],
   imports: [
     BrowserModule,

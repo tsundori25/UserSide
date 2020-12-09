@@ -17,3 +17,8 @@
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
 }
+p{
+    text-align: center;
+    font-weight: 650;
+    padding-top: 10px;
+}

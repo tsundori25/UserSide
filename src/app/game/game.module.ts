@@ -1,19 +1,34 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { GameRoutingModule } from './game-routing.module';
 import { BadmintonComponent } from './badminton/badminton.component';
-import { BalapkarungComponent } from './balapkarung/balapkarung.component';
-import { BalapkelerengComponent } from './balapkelereng/balapkelereng.component';
-import { BasketComponent } from './basket/basket.component';
-import { MakankerupukComponent } from './makankerupuk/makankerupuk.component';
-import { SepakbolaComponent } from './sepakbola/sepakbola.component';
-import { SepaktakrawComponent } from './sepaktakraw/sepaktakraw.component';
-import { VoliComponent } from './voli/voli.component';
-
+import { BracketComponent } from './badminton/bracket/bracket.component';
+import { PesertaComponent } from './badminton/peserta/peserta.component';
+import { DaftarComponent } from './badminton/daftar/daftar.component';
+import { InformasiComponent } from './badminton/informasi/informasi.component';
+import { BalapKarungComponent } from './balap-karung/balap-karung.component';
+import { MakanKerupukComponent } from './makan-kerupuk/makan-kerupuk.component';
+import { SepakBolaComponent } from './sepak-bola/sepak-bola.component';
+import { SepakTakrawComponent } from './sepak-takraw/sepak-takraw.component';
+import { BolaVoliComponent } from './bola-voli/bola-voli.component';
+import { BalapKelerengComponent } from './balap-kelereng/balap-kelereng.component';
+import { BasketBallComponent } from './basket-ball/basket-ball.component';
 
 @NgModule({
-  declarations: [BadmintonComponent,BalapkarungComponent,BalapkelerengComponent,BasketComponent,MakankerupukComponent,SepakbolaComponent,SepaktakrawComponent,VoliComponent],
+  declarations: [
+    BadmintonComponent,
+    BracketComponent,
+    PesertaComponent,
+    DaftarComponent,
+    InformasiComponent,
+    BalapKarungComponent,
+    MakanKerupukComponent,
+    SepakBolaComponent,
+    SepakTakrawComponent,
+    BolaVoliComponent,
+    BalapKelerengComponent,
+    BasketBallComponent,
+  ],
   imports: [
     CommonModule,
     GameRoutingModule
