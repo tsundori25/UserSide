@@ -1,21 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { MakanKerupukRoutingModule } from './makan-kerupuk-routing.module';
-import { BracketComponent } from './bracket/bracket.component';
-import { DaftarComponent } from './daftar/daftar.component';
 import { InformasiComponent } from './informasi/informasi.component';
-import { PesertaComponent } from './peserta/peserta.component';
 import { MakanKerupukComponent } from './makan-kerupuk.component';
+import { RegisterMakankerupukComponent } from './register-makankerupuk/register-makankerupuk.component';
+import { TeamMakankerupukComponent } from './team-makankerupuk/team-makankerupuk.component';
 
 
 @NgModule({
   declarations: [
     MakanKerupukComponent,
-    BracketComponent, 
-    DaftarComponent, 
-    InformasiComponent, 
-    PesertaComponent
+    InformasiComponent,
+    RegisterMakankerupukComponent,
+    TeamMakankerupukComponent,
   ],
   imports: [
     CommonModule,

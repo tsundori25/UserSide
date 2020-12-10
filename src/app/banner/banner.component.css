@@ -1,7 +1,7 @@
 .homepage {
-    background: url(../../assets/cyberpunk_2080-wallpaper-1366x768.jpg);
+    background: url(../../assets/background/download.png);
     background-size: cover;
-    height: 40vh;
+    height: 60vh;
     justify-content: center;
 }
 

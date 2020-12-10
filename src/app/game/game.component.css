@@ -1,8 +1,5 @@
-*{
-    cursor: pointer;
-}
 .main{    
-    margin: 2%;
+    background-color: red;
 }
 .card{
     outline: none;

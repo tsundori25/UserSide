@@ -1,10 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { BracketComponent } from '../badminton/bracket/bracket.component';
-import { DaftarComponent } from '../badminton/daftar/daftar.component';
 import { InformasiComponent } from '../badminton/informasi/informasi.component';
-import { PesertaComponent } from '../badminton/peserta/peserta.component';
 import { MakanKerupukComponent } from './makan-kerupuk.component';
+import { TeamMakankerupukComponent } from './team-makankerupuk/team-makankerupuk.component';
 
 const routes: Routes = [
   {
@@ -12,21 +10,13 @@ const routes: Routes = [
     component:MakanKerupukComponent,
     children:[
       {
-        path:'peserta',
-        component:PesertaComponent
-      },
-      {
-        path:'bracket',
-        component:BracketComponent
+        path:'team',
+        component:TeamMakankerupukComponent
       },
       {
         path:'informasi',
         component:InformasiComponent
       },
-      {
-        path:'daftar',
-        component:DaftarComponent
-      }
     ]
   }
 ];

@@ -1,20 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { BadmintonRoutingModule } from './badminton-routing.module';
 import { BadmintonComponent } from './badminton.component';
-import { BracketComponent } from './bracket/bracket.component';
-import { DaftarComponent } from './daftar/daftar.component';
 import { InformasiComponent } from './informasi/informasi.component';
-import { PesertaComponent } from './peserta/peserta.component';
+import { TeamBadmintonComponent } from './team-badminton/team-badminton.component';
+import { RegisterBadmintonComponent } from './register-badminton/register-badminton.component';
+
 
 @NgModule({
   declarations: [
     BadmintonComponent,
-    BracketComponent,
-    DaftarComponent,
     InformasiComponent,
-    PesertaComponent
+    TeamBadmintonComponent,
+    RegisterBadmintonComponent,
   ],
   imports: [
     CommonModule,
