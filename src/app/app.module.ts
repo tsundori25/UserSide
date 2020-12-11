@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { BannerComponent } from './banner/banner.component';
 import { FooterComponent } from './footer/footer.component';
 import { GameComponent } from './game/game.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { GameComponent } from './game/game.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
