@@ -1,9 +1,24 @@
-
-h4{
-    font-size: 1.5rem;
-    font-weight: 650;
+*body{
+    font-family: Times New Roman;
+    font-size: 15px;
+    background: #ffffff;
+    color: #666666;
 }
-label{
-    font-size: 1.3rem;
+.login-container{
+    height: 72vh;
+    width: 100%;
+}
+.login-form{
+    max-width: 100%;
+    width: 370px;
+    padding: 15px;
+    margin: auto;
+}
+.form-control{
+    font-size: 15px;
+    min-height: 48px;
     font-weight: 500;
+}
+h1{
+    text-align: center;
 }

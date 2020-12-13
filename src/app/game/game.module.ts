@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { GameRoutingModule } from './game-routing.module';
 import { BadmintonComponent } from './badminton/badminton.component';
-import { InformasiComponent } from './badminton/informasi/informasi.component';
 import { BalapKarungComponent } from './balap-karung/balap-karung.component';
 import { MakanKerupukComponent } from './makan-kerupuk/makan-kerupuk.component';
 import { SepakBolaComponent } from './sepak-bola/sepak-bola.component';
@@ -14,7 +13,6 @@ import { BasketBallComponent } from './basket-ball/basket-ball.component';
 @NgModule({
   declarations: [
     BadmintonComponent,
-    InformasiComponent,
     BalapKarungComponent,
     MakanKerupukComponent,
     SepakBolaComponent,

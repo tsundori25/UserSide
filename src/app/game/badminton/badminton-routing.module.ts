@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { BadmintonComponent } from './badminton.component';
-import { InformasiComponent } from './informasi/informasi.component';
+import { BracketBadmintonComponent } from './bracket-badminton/bracket-badminton.component';
+import { InfoBadmintonComponent } from './info-badminton/info-badminton.component';
 import { TeamBadmintonComponent } from './team-badminton/team-badminton.component';
 
 const routes: Routes = [
@@ -15,7 +16,11 @@ const routes: Routes = [
       },
       {
         path:'informasi',
-        component:InformasiComponent
+        component:InfoBadmintonComponent
+      },
+      {
+        path:'bracket',
+        component:BracketBadmintonComponent
       }
     ]
   }
