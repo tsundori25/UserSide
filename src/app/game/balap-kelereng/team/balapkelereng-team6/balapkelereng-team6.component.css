@@ -2,3 +2,9 @@
     margin: 2%;
     height: 64vh;
 }
+
+button{
+    outline: none;
+    background-color: blue;
+    margin-top: 70px;
+}

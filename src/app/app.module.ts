@@ -10,6 +10,8 @@ import { BannerComponent } from './banner/banner.component';
 import { FooterComponent } from './footer/footer.component';
 import { GameComponent } from './game/game.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ProfileComponent } from './admin/profile/profile.component';
+import { DaftarComponent } from './admin/daftar/daftar.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BannerComponent,
     FooterComponent,
     GameComponent,
+    ProfileComponent,
+    DaftarComponent,
 
   ],
   imports: [

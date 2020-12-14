@@ -1,8 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { DaftarComponent } from './admin/daftar/daftar.component';
 import { ForgotPasswordComponent } from './admin/forgot-password/forgot-password.component';
 import { LoginComponent } from './admin/login/login.component';
+import { ProfileComponent } from './admin/profile/profile.component';
 import { RegisterComponent } from './admin/register/register.component';
+
 import { BadmintonTeam1Component } from './game/badminton/team/badminton-team1/badminton-team1.component';
 import { BadmintonTeam10Component } from './game/badminton/team/badminton-team10/badminton-team10.component';
 import { BadmintonTeam2Component } from './game/badminton/team/badminton-team2/badminton-team2.component';
@@ -103,17 +106,9 @@ const routes: Routes = [
 
   {path:'forgot-password',component:ForgotPasswordComponent},
 
-  {path:'basket',loadChildren:()=>import('./game/basket-ball/basket-ball.module').then(mod=>mod.BasketBallModule)},
-  {path:'detail-basket-1',component:BasketballTeam1Component},
-  {path:'detail-basket-2',component:BasketballTeam2Component},
-  {path:'detail-basket-3',component:BasketballTeam3Component},
-  {path:'detail-basket-4',component:BasketballTeam4Component},
-  {path:'detail-basket-5',component:BasketballTeam5Component},
-  {path:'detail-basket-6',component:BasketballTeam6Component},
-  {path:'detail-basket-7',component:BasketballTeam7Component},
-  {path:'detail-basket-8',component:BasketballTeam8Component},
-  {path:'detail-basket-9',component:BasketballTeam9Component},
-  {path:'detail-basket-10',component:BasketballTeam10Component},
+  {path:'profile',component:ProfileComponent},
+
+  {path:'daftar',component:DaftarComponent},
 
   {path:'badminton',loadChildren:()=>import('./game/badminton/badminton.module').then(mod=>mod.BadmintonModule)},
   {path:'detail-badminton-1',component:BadmintonTeam1Component},
@@ -126,6 +121,18 @@ const routes: Routes = [
   {path:'detail-badminton-8',component:BadmintonTeam8Component},
   {path:'detail-badminton-9',component:BadmintonTeam9Component},
   {path:'detail-badminton-10',component:BadmintonTeam10Component},
+
+  {path:'basket',loadChildren:()=>import('./game/basket-ball/basket-ball.module').then(mod=>mod.BasketBallModule)},
+  {path:'detail-basketball-1',component:BasketballTeam1Component},
+  {path:'detail-basketball-2',component:BasketballTeam2Component},
+  {path:'detail-basketball-3',component:BasketballTeam3Component},
+  {path:'detail-basketball-4',component:BasketballTeam4Component},
+  {path:'detail-basketball-5',component:BasketballTeam5Component},
+  {path:'detail-basketball-6',component:BasketballTeam6Component},
+  {path:'detail-basketball-7',component:BasketballTeam7Component},
+  {path:'detail-basketball-8',component:BasketballTeam8Component},
+  {path:'detail-basketball-9',component:BasketballTeam9Component},
+  {path:'detail-basketball-10',component:BasketballTeam10Component},
 
   {path:'sepak-bola',loadChildren:()=>import('./game/sepak-bola/sepak-bola.module').then(mod=>mod.SepakBolaModule)},
   {path:'detail-sepakbola-1',component:SepakbolaTeam1Component},
