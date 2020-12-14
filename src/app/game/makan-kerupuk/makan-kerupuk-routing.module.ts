@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { BracketMakankerupukComponent } from './bracket-makankerupuk/bracket-makankerupuk.component';
 import { InfoMakankerupukComponent } from './info-makankerupuk/info-makankerupuk.component';
 import { MakanKerupukComponent } from './makan-kerupuk.component';
+import { RegisterMakankerupukComponent } from './register-makankerupuk/register-makankerupuk.component';
 import { TeamMakankerupukComponent } from './team-makankerupuk/team-makankerupuk.component';
 
 const routes: Routes = [
@@ -21,6 +22,10 @@ const routes: Routes = [
       {
         path:'bracket',
         component:BracketMakankerupukComponent
+      },
+      {
+        path:'daftar',
+        component:RegisterMakankerupukComponent
       }
     ]
   }

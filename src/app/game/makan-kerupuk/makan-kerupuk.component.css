@@ -1,7 +1,7 @@
 .homepage {
     background: url(../../../assets/daftar-lomba/e29f5738a352d7ff453d02fdad708c02.jpg);
     background-size: cover;
-    height: 65vh;
+    height: 64vh;
     justify-content: center;
 }
 
@@ -14,6 +14,7 @@
 h3{
     padding-top:5px;
     font-size: 3rem;
+    padding-top: 70px;
 }
 
 .navbar{

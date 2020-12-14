@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { BracketSepakbolaComponent } from './bracket-sepakbola/bracket-sepakbola.component';
 import { InfoSepakbolaComponent } from './info-sepakbola/info-sepakbola.component';
+import { RegisterSepakbolaComponent } from './register-sepakbola/register-sepakbola.component';
 import { SepakBolaComponent } from './sepak-bola.component';
 import { TeamSepakbolaComponent } from './team-sepakbola/team-sepakbola.component';
 
@@ -21,6 +22,10 @@ const routes: Routes = [
       {
         path:'bracket',
         component:BracketSepakbolaComponent
+      },
+      {
+        path:'daftar',
+        component:RegisterSepakbolaComponent
       }
     ]
   }

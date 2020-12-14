@@ -20,8 +20,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HomeComponent,
     BannerComponent,
     FooterComponent,
-    GameComponent
- 
+    GameComponent,
 
   ],
   imports: [

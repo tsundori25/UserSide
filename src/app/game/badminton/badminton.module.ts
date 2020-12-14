@@ -6,7 +6,6 @@ import { TeamBadmintonComponent } from './team-badminton/team-badminton.componen
 import { RegisterBadmintonComponent } from './register-badminton/register-badminton.component';
 import { BracketBadmintonComponent } from './bracket-badminton/bracket-badminton.component';
 
-
 @NgModule({
   declarations: [
     BadmintonComponent,

@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { BalapKelerengComponent } from './balap-kelereng.component';
 import { BracketBalapkelerengComponent } from './bracket-balapkelereng/bracket-balapkelereng.component';
 import { InfoBalapkelerengComponent } from './info-balapkelereng/info-balapkelereng.component';
+import { RegisterBalapkelerengComponent } from './register-balapkelereng/register-balapkelereng.component';
 import { TeamBalapkelerengComponent } from './team-balapkelereng/team-balapkelereng.component';
 
 const routes: Routes = [
@@ -21,6 +22,10 @@ const routes: Routes = [
       {
         path:'bracket',
         component:BracketBalapkelerengComponent
+      },
+      {
+        path:'daftar',
+        component:RegisterBalapkelerengComponent
       }
     ]
   }

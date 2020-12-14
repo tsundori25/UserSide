@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { BasketBallComponent } from './basket-ball.component';
 import { BracketBasketballComponent } from './bracket-basketball/bracket-basketball.component';
 import { InfoBasketballComponent } from './info-basketball/info-basketball.component';
+import { RegisterBasketballComponent } from './register-basketball/register-basketball.component';
 import { TeamBasketballComponent } from './team-basketball/team-basketball.component';
 
 const routes: Routes = [
@@ -21,6 +22,10 @@ const routes: Routes = [
       {
         path:'bracket',
         component:BracketBasketballComponent
+      },
+      {
+        path:'daftar',
+        component:RegisterBasketballComponent
       }
     ]
   }
