@@ -12,6 +12,9 @@ import { GameComponent } from './game/game.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProfileComponent } from './admin/profile/profile.component';
 import { DaftarComponent } from './admin/daftar/daftar.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { authIntercept, errorIntercept } from './auth/auth.intercept';
 
 @NgModule({
   declarations: [
@@ -25,14 +28,16 @@ import { DaftarComponent } from './admin/daftar/daftar.component';
     GameComponent,
     ProfileComponent,
     DaftarComponent,
-
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [authIntercept, errorIntercept],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

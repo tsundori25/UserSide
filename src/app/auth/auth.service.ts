@@ -11,7 +11,7 @@ export class AuthService {
   constructor(private http: HttpClient, private router: Router) {}
 
   login(login: Login) {
-    return this.http.post(`${baseUrl}/auth/client/login`, login).subscribe(
+    return this.http.post(`${baseUrl}auth/client/login`, login).subscribe(
       (sucess: any) => {
         localStorage.setItem('Token', sucess.token);
         localStorage.setItem('Payload', JSON.stringify(sucess.payload));
@@ -30,5 +30,16 @@ export class AuthService {
       this.router.navigate(['/']);
       return false;
     }
+  }
+
+  get getToken() {
+    return localStorage.getItem('Token');
+  }
+  get getPayloadData(): any {
+    return JSON.parse(localStorage.getItem('Payload'));
+  }
+  get isLogedIn(): boolean {
+    const token = this.getToken;
+    return token !== null ? true : false;
   }
 }

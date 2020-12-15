@@ -10,5 +10,5 @@ export interface SignUpUser {
 
 export interface TeamRegister {
   teamName: string;
-  memberTeam?: string[];
+  memberTeam?: string;
 }

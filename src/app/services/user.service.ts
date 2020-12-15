@@ -35,12 +35,14 @@ export class UserService {
       );
   }
 
-  addMemberTeam(teamId: string, teamRegister: TeamRegister) {
+  addMemberTeam(teamId: string, userId: string) {
     return this.http
-      .patch(`${baseUrl}team/add-member/${teamId}`, teamRegister)
+      .patch(`${baseUrl}team/add-member/${teamId}`, {
+        memberTeam: userId,
+      })
       .subscribe(
         (sucess) => {
-          window.alert('Anda berhasil menambahkan member');
+          window.alert('Anda berhasil join team');
         },
         (error) => {
           console.log(error);

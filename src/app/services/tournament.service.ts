@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { baseUrl } from 'src/environments/environment';
-import { map } from 'rxjs/operators';
+import { catchError, map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root',
@@ -9,12 +9,23 @@ import { map } from 'rxjs/operators';
 export class TournamentService {
   constructor(private http: HttpClient) {}
 
-  getIndexTournament(page: any) {
-    return this.http.get(`${baseUrl}tournament`).pipe(
-      map((response: any) => {
-        console.log(response);
-        return response.resultIndex;
+  getDetailTournament(id: string) {
+    return this.http.get(`${baseUrl}tournament/detail/${id}`).pipe(
+      map((body: any) => {
+        return body.resultDetailTournament.data;
       })
+    );
+  }
+  getIndexTournament() {
+    return this.http.get(`${baseUrl}tournament?page=1`).pipe(
+      map(
+        (body: any) => {
+          return body.resultIndex.data;
+        },
+        (catchError) => {
+          console.log(catchError);
+        }
+      )
     );
   }
 

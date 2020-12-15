@@ -1,66 +1,13 @@
-    <div class="main">
-        <div class="card">
-            <div class="image">
-                <img src="./../../assets/daftar-lomba/34cefb09c5fa01d101e3b1f9b685e2c7.jpg" routerLink="/badminton">
-            </div>
-            <div class="des">
-                <p>BADMINTON</p>
-            </div>
-        </div>
-        <div class="card">
-            <div class="image">
-                <img src="../../assets/daftar-lomba/500_F_277950498_PrtIbgrtxoiyD9vkGNsYOqIwWNQeF8mV.jpg" routerLink="/basket">
-            </div>
-            <div class="des">
-                <p>BASKET</p>
-            </div>
-        </div>
-        <div class="card">
-            <div class="image">
-                <img src="../../assets/daftar-lomba/tumblr_nqlakemaJJ1uy7p6no1_1280.jpg" routerLink="/balap-kelereng">
-            </div>
-            <div class="des">
-                <p>BALAP KELERENG</p>
-            </div>
-        </div>
-        <div class="card">
-            <div class="image">
-                <img src="../../assets/daftar-lomba/143652375-lomba-balap-karung-17-agustus-translate-sack-race-competition-on-17th-august-indonesian-independence.jpg" routerLink="/balap-karung">
-            </div>
-            <div class="des">
-                <p>BALAP KARUNG</p>
-            </div>
-        </div>
-        <div class="card">
-            <div class="image">
-                <img src="../../assets/daftar-lomba/e29f5738a352d7ff453d02fdad708c02.jpg" routerLink="/makan-kerupuk">
-            </div>
-            <div class="des">
-                <p>MAKAN KERUPUK</p>
-            </div>
-        </div>
-        <div class="card">
-            <div class="image">
-                <img src="../../assets/daftar-lomba/CzRbmup8xB.jpg" routerLink="/sepak-bola">
-            </div>
-            <div class="des">
-                <p>SEPAK BOLA</p>
-            </div>
-        </div>
-        <div class="card">
-            <div class="image">
-                <img src="../../assets/daftar-lomba/sepak-takraw-the-animation.jpg" routerLink="/sepak-takraw">
-            </div>
-            <div class="des">
-                <p>SEPAK TAKRAW</p>
-            </div>
-        </div>
-        <div class="card">
-            <div class="image">
-                <img src="../../assets/daftar-lomba/volleyball-bookhoodies-new-looks-for-your-books-hoodie-goodies-371477.jpg" routerLink="/bola-voli">
-            </div>
-            <div class="des">
-                <p>BOLA VOLI</p>
-            </div>
-        </div>
+<div class="main">
+  <div class="card" *ngFor="let tournament of tournamentData">
+    <div class="image">
+      <img
+        src="{{ tournament.category.picture }}"
+        routerLink="tournament/{{ tournament._id }}"
+      />
     </div>
+    <div class="des">
+      <p>{{ tournament.category.categoryName }}</p>
+    </div>
+  </div>
+</div>
