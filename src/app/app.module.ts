@@ -13,8 +13,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProfileComponent } from './admin/profile/profile.component';
 import { DaftarComponent } from './admin/daftar/daftar.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { authIntercept, errorIntercept } from './auth/auth.intercept';
+import { Banner2Component } from './banner2/banner2.component';
+import { Banner3Component } from './banner3/banner3.component';
+import { Banner4Component } from './banner4/banner4.component';
+import { Banner5Component } from './banner5/banner5.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +33,10 @@ import { authIntercept, errorIntercept } from './auth/auth.intercept';
     GameComponent,
     ProfileComponent,
     DaftarComponent,
+    Banner2Component,
+    Banner3Component,
+    Banner4Component,
+    Banner5Component,
   ],
   imports: [
     BrowserModule,
@@ -36,6 +45,7 @@ import { authIntercept, errorIntercept } from './auth/auth.intercept';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    CarouselModule
   ],
   providers: [authIntercept, errorIntercept],
   bootstrap: [AppComponent],

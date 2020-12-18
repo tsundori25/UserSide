@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Tournament } from '../models/tournament.interface';
 import { TournamentService } from '../services/tournament.service';
+import AOS from 'aos';
 
 @Component({
   selector: 'app-game',
@@ -13,7 +14,36 @@ export class GameComponent implements OnInit {
   constructor(private tournamentService: TournamentService) {}
 
   ngOnInit(): void {
+    AOS.init();
+
     this.getIndexTournaments();
+  }
+
+  customOptions: any = {
+    loop: true,
+    mouseDrag: true,
+    touchDrag: true,
+    pullDrag: true,
+    margin: 10,
+    lazyload: true,
+    dots: false,
+    navSpeed: 700,
+    navText: ['--->>', '<<---'],
+    responsive: {
+      0: {
+        items: 1
+      },
+      400: {
+        items: 2
+      },
+      740: {
+        items: 3
+      },
+      940: {
+        items: 3
+      }
+    },
+    nav: true
   }
 
   getIndexTournaments() {

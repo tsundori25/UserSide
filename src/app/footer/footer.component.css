@@ -1,6 +1,11 @@
 .footer{    
-    background-color: black;
+    background-color: rgb(33,33,33);
     text-align: center;
     padding: 50px;
-    color: white;
+    color: rgb(152,152,152);
+}
+
+.social-icon a{
+    padding: 1rem;
+    margin: 1rem;
 }

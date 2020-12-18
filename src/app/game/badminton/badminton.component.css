@@ -1,0 +1,20 @@
+.banner img{
+    background-size: cover;
+    width: 100%;
+    height: 60vh;
+    
+}
+
+.nav{
+    background-color: rgb(33,44,62);
+}
+
+.nav-item a{
+    color: black;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.nav-item a:hover{
+    color: white;
+}
