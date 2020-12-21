@@ -1,9 +1,10 @@
 <div class="main">
+  <h1>Game Tournament</h1>
   <div class="card" *ngFor="let tournament of tournamentData">
     <div class="image">
       <img
         src="{{ tournament.category.picture }}"
-        routerLink="tournament/{{ tournament._id }}"
+        routerLink="/tournament/{{ tournament._id }}"
       />
     </div>
     <div class="des">
@@ -13,19 +14,16 @@
 </div>
 
 <div class="main">
-  <h1 data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="500">---> Game Turnament Kemerdekaan <--- </h1>
-  <div class="card">
-    <owl-carousel-o [options]="customOptions">
-      <ng-template carouselSlide><img src="../../assets/badminton.jpg" alt="badminton" routerLink="/badminton"></ng-template>  
-      <ng-template carouselSlide><img src="../../assets/Basketball-hd-resolution-wallpaper.jpg" alt="basketball" routerLink="/basket"></ng-template>  
-      <ng-template carouselSlide><img src="../../assets/sepak bola.jpg" alt="sepakbola" routerLink="/sepakbola"></ng-template> 
-      <ng-template carouselSlide><img src="../../assets/balapkarung.jpg" alt="balapkarung"></ng-template> 
-      <ng-template carouselSlide><img src="../../assets/balapkelereng.jpg" alt="balapkelereng"></ng-template> 
-      <ng-template carouselSlide><img src="../../assets/voli.jpg" alt="voli"></ng-template> 
-      <ng-template carouselSlide><img src="../../assets/Fishing_Soft_Lure_Umpan_Pancing_Udang_Besar_Mancing_Ikan_di_.jpg" alt="mancing"></ng-template> 
-      <ng-template carouselSlide><img src="../../assets/makankerupuk.jpg" alt="makanakerupuk"></ng-template> 
-      <ng-template carouselSlide><img src="../../assets/panjat_pinang_wpap_by_adityasp-d7vmoh9.jpg" alt="panjatpinang"></ng-template> 
-      <ng-template carouselSlide><img src="../../assets/takraw-carbon-wallpaper.png" alt="sepaktakraw"></ng-template> 
-    </owl-carousel-o>
+  <div class="card" *ngFor="let i of [1,2,3,4,5,6,7,8]">
+    <div class="image">
+      <img
+        src="../../assets/badminton.jpg"
+        routerLink="/tournament"
+      />
+    </div>
+    <div class="des">
+      <p>badminton</p>
+    </div>
   </div>
 </div>
+

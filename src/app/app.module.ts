@@ -16,10 +16,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { authIntercept, errorIntercept } from './auth/auth.intercept';
-import { Banner2Component } from './banner2/banner2.component';
-import { Banner3Component } from './banner3/banner3.component';
-import { Banner4Component } from './banner4/banner4.component';
-import { Banner5Component } from './banner5/banner5.component';
+import { Banner3Component } from './banner/banner3/banner3.component';
+import { Banner4Component } from './banner/banner4/banner4.component';
 
 @NgModule({
   declarations: [
@@ -33,10 +31,8 @@ import { Banner5Component } from './banner5/banner5.component';
     GameComponent,
     ProfileComponent,
     DaftarComponent,
-    Banner2Component,
     Banner3Component,
     Banner4Component,
-    Banner5Component,
   ],
   imports: [
     BrowserModule,

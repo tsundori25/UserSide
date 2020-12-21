@@ -5,47 +5,45 @@ import { ForgotPasswordComponent } from './admin/forgot-password/forgot-password
 import { LoginComponent } from './admin/login/login.component';
 import { ProfileComponent } from './admin/profile/profile.component';
 import { RegisterComponent } from './admin/register/register.component';
-import { BadmintonComponent } from './game/badminton/badminton.component';
-import { BasketComponent } from './game/basket/basket.component';
-import { SepakbolaComponent } from './game/sepakbola/sepakbola.component';
-import { DetailTeamComponent } from './game/tournament/detail-team/detail-team.component';
+import { DetailTeamComponent } from './tournament/detail-team/detail-team.component';
 import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: '', 
+    redirectTo: 'home',
+    pathMatch: 'full' 
+  },
 
-  { path: 'home', component: HomeComponent },
+  { path: 'home', 
+    component: HomeComponent
+  },
 
-  { path: 'login', component: LoginComponent },
+  { path: 'login',
+    component: LoginComponent
+  },
 
-  { path: 'register', component: RegisterComponent },
+  { path: 'register',
+    component: RegisterComponent 
+  },
 
-  { path: 'forgot-password', component: ForgotPasswordComponent },
+  { path: 'forgot-password', 
+    component: ForgotPasswordComponent 
+  },
 
-  { path: 'profile', component: ProfileComponent },
+  { path: 'profile', 
+    component: ProfileComponent 
+  },
 
-  { path: 'daftar', component: DaftarComponent },
-
-  { path: 'badminton',component:BadmintonComponent},
-
-  { path: 'sepakbola', component: SepakbolaComponent},
-
-  { path: 'basket', component: BasketComponent},
-
-  {
-    path: 'badminton',
-    loadChildren: () =>
-      import('./game/badminton/badminton.module').then(
-        (mod) => mod.BadmintonModule
-      ),
+  { path: 'daftar',
+    component: DaftarComponent 
   },
 
   {
-    path: 'tournament',
+    path:'tournament',
     loadChildren: () =>
-      import('./game/tournament/tournament.module').then(
-        (mod) => mod.TournamentModule
-      ),
+    import('./tournament/tournament.module').then(
+      (m) => m.TournamentModule
+    )
   },
   { path: 'detail-team/:id', component: DetailTeamComponent },
 
