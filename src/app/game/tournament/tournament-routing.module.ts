@@ -7,7 +7,7 @@ import { ListTournamentComponent } from './list-team/list-team.component';
 
 const routes: Routes = [
   {
-    path: '/:id',
+    path: 'tournament',
     component: TournamentComponent,
     children: [
       {
@@ -15,7 +15,7 @@ const routes: Routes = [
         component: ListTournamentComponent,
       },
       {
-        path: 'informasi/:id',
+        path: 'informasi',
         component: InfoBadmintonComponent,
       },
       {

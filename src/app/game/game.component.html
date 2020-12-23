@@ -1,10 +1,7 @@
 <div class="main">
   <div class="card" *ngFor="let tournament of tournamentData">
     <div class="image">
-      <img
-        src="{{ tournament.category.picture }}"
-        routerLink="tournament/{{ tournament._id }}"
-      />
+      <img src="{{ tournament.category.picture }}" routerLink="/tournament" />
     </div>
     <div class="des">
       <p>{{ tournament.category.categoryName }}</p>
