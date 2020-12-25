@@ -9,10 +9,15 @@ import { TournamentService } from '../services/tournament.service';
 })
 export class GameComponent implements OnInit {
   tournamentData: Tournament;
+  data: any 
 
   constructor(private tournamentService: TournamentService) {}
 
   ngOnInit(): void {
+    this.tournamentService.getTurnament().subscribe((succes: any) => {
+      console.log(succes.resultIndex.data);
+      this.data = succes.resultIndex.data;
+      })
 
     this.getIndexTournaments();
   }

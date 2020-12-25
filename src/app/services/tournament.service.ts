@@ -44,4 +44,10 @@ export class TournamentService {
         window.alert(sucess.notification);
       });
   }
+
+  getTurnament(){
+    return this.http.get(`https://s1mple-tours-be.herokuapp.com/tournament?page=1`)
+    
+  }
 }
+
