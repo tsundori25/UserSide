@@ -45,7 +45,7 @@ const routes: Routes = [
       (m) => m.TournamentModule
     )
   },
-  { path: 'detail-team/:id', component: DetailTeamComponent },
+  { path: 'detail-team', component: DetailTeamComponent },
 
 ];
 @NgModule({

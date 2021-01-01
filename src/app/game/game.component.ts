@@ -9,27 +9,26 @@ import { TournamentService } from '../services/tournament.service';
 })
 export class GameComponent implements OnInit {
   tournamentData: Tournament;
-  data: any 
+  tournaments: Tournament;
 
   constructor(private tournamentService: TournamentService) {}
 
   ngOnInit(): void {
     this.tournamentService.getTurnament().subscribe((succes: any) => {
-      console.log(succes.resultIndex.data);
-      this.data = succes.resultIndex.data;
-      })
+      this.tournaments = succes.resultIndex.data;
+    })
 
-    this.getIndexTournaments();
+    // this.getIndexTournaments();
   }
 
-  getIndexTournaments() {
-    this.tournamentService.getIndexTournament().subscribe(
-      (res) => {
-        this.tournamentData = res;
-      },
-      (error: any) => {
-        //console.log(error);
-      }
-    );
-  }
+  // getIndexTournaments() {
+  //   this.tournamentService.getIndexTournament().subscribe(
+  //     (res) => {
+  //       this.tournamentData = res;
+  //     },
+  //     (error: any) => {
+  //       //console.log(error);
+  //     }
+  //   );
+  // }
 }

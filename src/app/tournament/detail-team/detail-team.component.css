@@ -1,10 +1,8 @@
-.detail{
-    margin: 2%;
-    height: 64vh;
-}
+.table{
+    justify-content: center;
+    text-align: center;
+    margin: 3%;
+    width: 90%;
+    height: auto;
 
-button{
-    outline: none;
-    background-color: blue;
-    margin-top: 70px;
 }

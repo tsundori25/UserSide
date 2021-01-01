@@ -1,29 +1,17 @@
 <div class="main">
-  <h1>Game Tournament</h1>
-  <div class="card" *ngFor="let tournament of tournamentData">
+  <h1>--> Game Tournament <--</h1>
+  <div class="card" *ngFor="let tournament of tournaments">
     <div class="image">
       <img
-        src="{{ tournament.category.picture }}"
-        routerLink="/tournament/{{ tournament._id }}"
-      />
-    </div>
-    <div class="des">
-      <p>{{ tournament.category.categoryName }}</p>
-    </div>
-  </div>
-</div>
-
-<div class="main">
-  <div class="card" *ngFor="let data of data">
-    <div class="image">
-      <img
-        src="../../assets/badminton.jpg"
+        src="{{tournament.category.picture}}"
         routerLink="/tournament"
       />
     </div>
     <div class="des">
-      <p>{{data.name}}</p>
+      <p>{{tournament.name}}</p>
     </div>
   </div>
 </div>
+
+
 
