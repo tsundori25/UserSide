@@ -33,6 +33,7 @@ import { Banner4Component } from './banner/banner4/banner4.component';
     DaftarComponent,
     Banner3Component,
     Banner4Component,
+
   ],
   imports: [
     BrowserModule,
