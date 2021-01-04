@@ -1,24 +1,40 @@
-*body{
-    font-family: Arial, Helvetica;
-    font-size: 15px;
-    background: #ffffff;
-    color: #666666;
-}
-.login-container{
-    height: 72vh;
-    width: 100%;
-}
-.login-form{
-    max-width: 100%;
-    width: 370px;
-    padding: 15px;
-    margin: auto;
-}
-.form-control{
-    font-size: 15px;
-    min-height: 48px;
-    font-weight: 500;
+.main{
+    background-color: rgb(231,227,218);
 }
 h1{
     text-align: center;
+    padding-top: 30px;
+    font-style: bold;
+    font-size: 2rem;
+    font-weight: 500;
+}
+h2{
+    margin: 2%;
+}
+.card{
+    outline: none;
+    width: 16%;
+    display: inline-block;
+    border-radius: 5px; 
+    margin: 2%;
+}
+.image img{
+    outline:none;
+    width: 100%;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+p{
+    text-align: center;
+    font-weight: 650;
+    padding-top: 10px;
+}
+input{
+    margin-left: 30px;
+    padding: 10px;
+    border: none;
+}
+.des input{
+    border: none;
+    margin: 5px;
 }
