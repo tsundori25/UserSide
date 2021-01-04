@@ -2,6 +2,8 @@
   border-collapse: collapse;
   margin: auto;
   font-size: 1.3rem;
+  width: 90%;
+  text-align: center;
 }
 
 .table thead tr {

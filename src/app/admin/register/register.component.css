@@ -9,6 +9,7 @@
 }
 
 .wrapper .title{
+  font-style: bold;
   font-size: 24px;
   font-weight: 700;
   margin-bottom: 25px;
@@ -163,4 +164,8 @@
   .wrapper .form .inputfield.terms{
     flex-direction: row;
   }
+}
+
+main{
+  background-image: url(../../../assets/136-1367885_background-merah-putih-keren.jpg);
 }

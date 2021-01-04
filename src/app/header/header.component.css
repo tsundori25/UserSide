@@ -1,5 +1,7 @@
 .navbar{
-    background-color:rgb(34,34,41)
+    background-color:rgb(34,34,41);
+    position: sticky;
+    top: 0px;
 }
 
 a{

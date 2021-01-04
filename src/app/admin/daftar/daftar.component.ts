@@ -28,4 +28,15 @@ export class DaftarComponent implements OnInit {
     const userPayload = this.authService.getPayloadData;
     this.userService.createTeam(userPayload.userId, this.createTeam.value);
   }
+
+  imageUrl="../../../assets/peserta-logo.jpg"
+  onSelectFile(e){
+    if(e.target.files){
+      var reader = new FileReader();
+      reader.readAsDataURL(e.target.files[0]);
+      reader.onload = (event:any) => {
+        this.imageUrl = event.target.result;
+      }
+    }
+  }
 }

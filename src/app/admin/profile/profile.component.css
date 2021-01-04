@@ -7,6 +7,7 @@
 .login-container{
     height: 100vh;
     width: 100%;
+    background-image: url(../../../assets/136-1367885_background-merah-putih-keren.jpg);
 }
 .login-form{
     max-width: 100%;
