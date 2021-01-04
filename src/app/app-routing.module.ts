@@ -9,44 +9,26 @@ import { DetailTeamComponent } from './tournament/detail-team/detail-team.compon
 import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
-  { path: '', 
-    redirectTo: 'home',
-    pathMatch: 'full' 
-  },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
 
-  { path: 'home', 
-    component: HomeComponent
-  },
+  { path: 'home', component: HomeComponent },
 
-  { path: 'login',
-    component: LoginComponent
-  },
+  { path: 'login', component: LoginComponent },
 
-  { path: 'register',
-    component: RegisterComponent 
-  },
+  { path: 'register', component: RegisterComponent },
 
-  { path: 'forgot-password', 
-    component: ForgotPasswordComponent 
-  },
+  { path: 'forgot-password', component: ForgotPasswordComponent },
 
-  { path: 'profile', 
-    component: ProfileComponent 
-  },
+  { path: 'profile', component: ProfileComponent },
 
-  { path: 'daftar',
-    component: DaftarComponent 
-  },
+  { path: 'daftar', component: DaftarComponent },
 
   {
-    path:'tournament',
+    path: 'tournament',
     loadChildren: () =>
-    import('./tournament/tournament.module').then(
-      (m) => m.TournamentModule
-    )
+      import('./tournament/tournament.module').then((m) => m.TournamentModule),
   },
   { path: 'detail-team', component: DetailTeamComponent },
-
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

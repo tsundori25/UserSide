@@ -14,21 +14,17 @@ export class GameComponent implements OnInit {
   constructor(private tournamentService: TournamentService) {}
 
   ngOnInit(): void {
-    this.tournamentService.getTurnament().subscribe((succes: any) => {
-      this.tournaments = succes.resultIndex.data;
-    })
-
-    // this.getIndexTournaments();
+    this.getIndexTournaments();
   }
 
-  // getIndexTournaments() {
-  //   this.tournamentService.getIndexTournament().subscribe(
-  //     (res) => {
-  //       this.tournamentData = res;
-  //     },
-  //     (error: any) => {
-  //       //console.log(error);
-  //     }
-  //   );
-  // }
+  getIndexTournaments() {
+    this.tournamentService.getIndexTournament().subscribe(
+      (res) => {
+        this.tournamentData = res;
+      },
+      (error: any) => {
+        //console.log(error);
+      }
+    );
+  }
 }

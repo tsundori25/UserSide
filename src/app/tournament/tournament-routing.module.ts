@@ -7,7 +7,7 @@ import { BracketTournamentComponent } from './bracket-tournament/bracket-tournam
 
 const routes: Routes = [
   {
-    path: '',
+    path: ':permalink',
     component: TournamentComponent,
     children: [
       {
@@ -20,7 +20,7 @@ const routes: Routes = [
       },
       {
         path: 'bracket',
-        component: BracketTournamentComponent
+        component: BracketTournamentComponent,
       },
     ],
   },

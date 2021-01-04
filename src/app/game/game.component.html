@@ -1,17 +1,14 @@
 <div class="main">
   <h1>--> Game Tournament <--</h1>
-  <div class="card" *ngFor="let tournament of tournaments">
+  <div class="card" *ngFor="let tournament of tournamentData">
     <div class="image">
       <img
-        src="{{tournament.category.picture}}"
-        routerLink="/tournament"
+        src="{{ tournament.category.picture }}"
+        routerLink="/tournament/{{ tournament.permalink }}"
       />
     </div>
     <div class="des">
-      <p>{{tournament.name}}</p>
+      <p>{{ tournament.name }}</p>
     </div>
   </div>
 </div>
-
-
-
