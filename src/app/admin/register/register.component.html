@@ -1,73 +1,59 @@
-<div class="login-container d-flex align-items center justify-content-center">
-  <form class="login-form" [formGroup]="signUpForm" (ngSubmit)="signUp()">
-    <div class="form-group">
-      <input
-        type="text"
-        class="form-control rounded-pill form-control-lg"
-        placeholder="Username"
-        formControlName="username"
-      />
+<div class="wrapper">
+  <div class="title">
+    Registration Form
+  </div>
+  <div class="form">
+     <div class="inputfield">
+        <label>Username</label>
+        <input type="text" class="input">
+     </div>  
+      <div class="inputfield">
+        <label>Email</label>
+        <input type="text" class="input">
+     </div>  
+     <div class="inputfield">
+        <label>Password</label>
+        <input type="password" class="input">
+     </div>  
+    <div class="inputfield">
+        <label>Confirm Password</label>
+        <input type="password" class="input">
+     </div> 
+      <div class="inputfield">
+        <label>Gender</label>
+        <div class="custom_select">
+          <select>
+            <option value="">Select</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+        </div>
+     </div> 
+      <div class="inputfield">
+        <label>City</label>
+        <input type="text" class="input">
+     </div> 
+    <div class="inputfield">
+        <label>Phone Number</label>
+        <input type="text" class="input">
+     </div> 
+    <div class="inputfield">
+        <label>Address</label>
+        <textarea class="textarea"></textarea>
+     </div> 
+    <div class="inputfield">
+        <label>Postal Code</label>
+        <input type="text" class="input">
+     </div> 
+    <div class="inputfield terms">
+        <label class="check">
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <p>Agreed to terms and conditions</p>
+     </div> 
+    <div class="inputfield">
+      <input type="submit" value="Register" class="btn">
     </div>
-    <div class="form-group">
-      <input
-        type="email"
-        class="form-control rounded-pill form-control-lg"
-        placeholder="Email"
-        formControlName="email"
-      />
-    </div>
-    <div class="form-group">
-      <input
-        type="password"
-        class="form-control rounded-pill form-control-lg"
-        placeholder="Password"
-        formControlName="password"
-      />
-    </div>
-    <div class="form-group">
-      <input
-        type="text"
-        class="form-control rounded-pill form-control-lg"
-        placeholder="Phone Number"
-        formControlName="phone number"
-      />
-    </div>
-    <div class="form-group">
-      <input
-        type="text"
-        class="form-control rounded-pill form-control-lg"
-        placeholder="City"
-        formControlName="city"
-      />
-    </div>
-    <div class="form-group">
-      <input
-        type="number"
-        class="form-control rounded-pill form-control-lg"
-        placeholder="Birtday"
-        formControlName="birtday"
-      />
-    </div>
-    <div class="form-group">
-      <input
-        type="number"
-        class="form-control rounded-pill form-control-lg"
-        placeholder="Phone"
-        formControlName="phone"
-      />
-    </div>
-    <div class="forgot-link d-flex align-items center justify-content-between">
-      <div class="form-check">
-        <input type="checkbox" class="check-form-input" id="remember" />
-        <label for="remember">Remember Password</label>
-      </div>
-      <a routerLink="/forgot-password">Forgot Password</a>
-    </div>
-    <button
-      type="submit"
-      class="btn mt-3 btn-primary btn-block rounded-pill btn-lg"
-    >
-      Register
-    </button>
-  </form>
+  </div>
 </div>
