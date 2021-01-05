@@ -10,8 +10,6 @@ export class BracketTournamentComponent implements OnInit {
   constructor(private route: ActivatedRoute) {}
 
   ngOnInit(): void {
-    this.route.parent.params.subscribe((res) => {
-      console.log(res);
-    });
+    this.route.parent.params.subscribe((res) => {});
   }
 }

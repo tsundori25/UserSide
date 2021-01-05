@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { first } from 'rxjs/operators';
+import { AuthService } from 'src/app/auth/auth.service';
 import { Tournament } from 'src/app/models/tournament.interface';
 import { TournamentService } from 'src/app/services/tournament.service';
 
@@ -13,7 +14,8 @@ export class InfoBadmintonComponent implements OnInit {
   dataDetail: any;
   constructor(
     private tournamentService: TournamentService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    public authService: AuthService
   ) {}
 
   ngOnInit(): void {
@@ -29,5 +31,12 @@ export class InfoBadmintonComponent implements OnInit {
           console.log(this.dataDetail.prizePool.firstPrize);
         });
     });
+  }
+
+  registerTournament(userData) {
+    this.tournamentService.registerTournamentSolo(
+      userData.userId,
+      this.dataDetail._id
+    );
   }
 }

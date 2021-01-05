@@ -21,6 +21,7 @@ export class RegisterComponent implements OnInit {
 
   signUp() {
     this.userService.singUp(this.signUpForm.value);
+    console.log(this.signUpForm.value);
   }
 
   private createForm() {
@@ -30,7 +31,7 @@ export class RegisterComponent implements OnInit {
       email: [''],
       username: [''],
       password: [''],
-      age: Date,
+      birthday: Date,
       phone: Number,
     });
   }

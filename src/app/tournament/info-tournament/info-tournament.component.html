@@ -100,4 +100,6 @@
   >
 </div>
 
-<button routerLink="/register-turnament">Register Turnament</button>
+<button (click)="registerTournament(this.authService.getPayloadData)">
+  Register Turnament
+</button>

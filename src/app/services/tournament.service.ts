@@ -33,10 +33,17 @@ export class TournamentService {
 
   registerTournamentSolo(userId: string, tournamentId: string) {
     return this.http
-      .patch(`${baseUrl}${tournamentId}/register/${userId}`, null)
-      .subscribe((sucess: any) => {
-        window.alert(sucess.notification);
-      });
+      .patch(`${baseUrl}tournament/${tournamentId}/register/${userId}`, null)
+      .subscribe(
+        (sucess: any) => {
+          console.log(sucess.message);
+
+          window.alert(sucess);
+        },
+        (error) => {
+          window.alert(error);
+        }
+      );
   }
 
   registerTournamentTeam(userId: string, tournamentId: string) {

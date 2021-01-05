@@ -1,7 +1,7 @@
 <main>
   <div class="wrapper">
     <div class="title">Registration</div>
-    <div class="form" [formGroup]="signUpForm" (ngSubmit)="signUp()">
+    <form class="form" [formGroup]="signUpForm" (ngSubmit)="signUp()">
       <div class="inputfield">
         <label>First Name</label>
         <input type="text" class="input" formControlName="firstName" />
@@ -37,8 +37,8 @@
         </div>
       </div> -->
       <div class="inputfield">
-        <label>Britday</label>
-        <input type="date" class="input" formControlName="age" />
+        <label>Birthday</label>
+        <input type="date" class="input" formControlName="birthday" />
       </div>
       <div class="inputfield">
         <label>Phone Number</label>
@@ -62,6 +62,6 @@
       <div class="inputfield">
         <input type="submit" value="Register" class="btn" />
       </div>
-    </div>
+    </form>
   </div>
 </main>

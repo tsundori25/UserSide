@@ -29,7 +29,7 @@ const routes: Routes = [
     loadChildren: () =>
       import('./tournament/tournament.module').then((m) => m.TournamentModule),
   },
-  { path: 'detail', component: DetailTeamComponent },
+  { path: 'detail-team', component: DetailTeamComponent },
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

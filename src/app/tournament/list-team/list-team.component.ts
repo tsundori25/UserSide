@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Tournament } from 'src/app/models/tournament.interface';
 import { TournamentService } from 'src/app/services/tournament.service';
 import { TournamentModule } from '../tournament.module';
 
@@ -8,13 +10,25 @@ import { TournamentModule } from '../tournament.module';
   styleUrls: ['./list-team.component.css'],
 })
 export class ListTournamentComponent implements OnInit {
-  tournamentData: TournamentModule[];
-  page: number;
-  constructor(private tournamentServie: TournamentService) {}
+  tournamentData: Tournament;
+  partipants: any;
+  constructor(
+    private tournamentService: TournamentService,
+    private route: ActivatedRoute
+  ) {}
 
   ngOnInit(): void {
-    this.getIndexTournament();
+    this.getDetailTournament();
   }
 
-  getIndexTournament() {}
+  getDetailTournament() {
+    this.route.parent.params.subscribe((res) => {
+      this.tournamentService
+        .getDetailTournament(res.permalink)
+        .subscribe((data: any) => {
+          this.tournamentData = data;
+          this.partipants = data.participants;
+        });
+    });
+  }
 }
