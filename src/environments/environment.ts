@@ -6,7 +6,7 @@ export const environment = {
   production: false,
 };
 
-export const baseUrl = 'http://localhost:4000/';
+export const baseUrl = 'https://s1mple-tours-be.herokuapp.com/';
 /*
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.

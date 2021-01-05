@@ -30,7 +30,8 @@ export class RegisterComponent implements OnInit {
       email: [''],
       username: [''],
       password: [''],
-      age: Number,
+      age: Date,
+      phone: Number,
     });
   }
 }
