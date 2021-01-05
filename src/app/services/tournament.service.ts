@@ -36,8 +36,6 @@ export class TournamentService {
       .patch(`${baseUrl}tournament/${tournamentId}/register/${userId}`, null)
       .subscribe(
         (sucess: any) => {
-          console.log(sucess.message);
-
           window.alert(sucess);
         },
         (error) => {
