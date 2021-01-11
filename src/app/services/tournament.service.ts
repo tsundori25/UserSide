@@ -4,6 +4,8 @@ import { baseUrl } from 'src/environments/environment';
 import { catchError, map } from 'rxjs/operators';
 import { ActivatedRoute, UrlSegment } from '@angular/router';
 import { Observable } from 'rxjs';
+import { environment } from '../../environments/environment';
+
 
 @Injectable({
   providedIn: 'root',
@@ -55,5 +57,14 @@ export class TournamentService {
     return this.http.get(
       `https://s1mple-tours-be.herokuapp.com/tournament?page=1`
     );
+  }
+  private getPaginationData(response: any) {
+    return response.resultIndex.pagination;
+  }
+  getPagination(params: any): any {
+    return this.http.get(`${environment.serverUrl}tournament`, { params }).pipe(map(this.getPaginationData));
+  }
+  getAll(params): Observable<any> {
+    return this.http.get(baseUrl, { params });
   }
 }

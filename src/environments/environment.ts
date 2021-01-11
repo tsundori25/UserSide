@@ -1,9 +1,15 @@
 // This file can be replaced during build by using the `fileReplacements` array.
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
+import { env } from './env';
 
 export const environment = {
   production: false,
+  hmr: true,
+  version: env.npm_package_version + '-dev',
+  serverUrl: 'https://assignment3fsjs.herokuapp.com/',
+  defaultLanguage: 'en-US',
+  supportedLanguages: ['en-US'],
 };
 
 export const baseUrl = 'https://s1mple-tours-be.herokuapp.com/';

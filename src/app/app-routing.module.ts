@@ -7,6 +7,8 @@ import { ProfileComponent } from './admin/profile/profile.component';
 import { RegisterComponent } from './admin/register/register.component';
 import { DetailTeamComponent } from './tournament/detail-team/detail-team.component';
 import { HomeComponent } from './home/home.component';
+import { TournamentComponent } from './tournament/tournament.component';
+import { ListTournamentComponent } from './tournament/list-team/list-team.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -22,7 +24,6 @@ const routes: Routes = [
   { path: 'profile', component: ProfileComponent },
 
   { path: 'daftar-team', component: DaftarComponent },
-
   {
     path: 'tournament',
     loadChildren: () =>
