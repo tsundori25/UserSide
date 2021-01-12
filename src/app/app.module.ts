@@ -18,10 +18,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { authIntercept, errorIntercept } from './auth/auth.intercept';
 import { Banner3Component } from './banner/banner3/banner3.component';
 import { Banner4Component } from './banner/banner4/banner4.component';
-import { NgxPaginationModule} from 'ngx-pagination';
-import { Ng2SearchPipeModule} from 'ng2-search-filter';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { PipePipe } from './pipe.pipe';
-import { HighlightDirective } from './highlight.directive'
+import { HighlightDirective } from './highlight.directive';
+import { TournamentModule } from './tournament/tournament.module';
 
 @NgModule({
   declarations: [
@@ -38,9 +39,7 @@ import { HighlightDirective } from './highlight.directive'
     Banner3Component,
     Banner4Component,
     PipePipe,
-    HighlightDirective
-  
-
+    HighlightDirective,
   ],
   imports: [
     BrowserModule,
@@ -49,9 +48,10 @@ import { HighlightDirective } from './highlight.directive'
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    TournamentModule,
     CarouselModule,
     NgxPaginationModule,
-    Ng2SearchPipeModule
+    Ng2SearchPipeModule,
   ],
   providers: [authIntercept, errorIntercept],
   bootstrap: [AppComponent],

@@ -11,7 +11,6 @@ import { TournamentModule } from '../tournament.module';
 })
 export class ListTournamentComponent implements OnInit {
   tournamentData: Tournament;
-  partipants: any;
   constructor(
     private tournamentService: TournamentService,
     private route: ActivatedRoute
@@ -27,7 +26,6 @@ export class ListTournamentComponent implements OnInit {
         .getDetailTournament(res.permalink)
         .subscribe((data: any) => {
           this.tournamentData = data;
-          this.partipants = data.participants;
         });
     });
   }
