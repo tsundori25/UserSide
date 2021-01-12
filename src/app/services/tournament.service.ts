@@ -6,7 +6,6 @@ import { ActivatedRoute, UrlSegment } from '@angular/router';
 import { Observable } from 'rxjs';
 import { environment } from '../../environments/environment';
 
-
 @Injectable({
   providedIn: 'root',
 })
@@ -20,11 +19,11 @@ export class TournamentService {
       })
     );
   }
-  getIndexTournament() {
-    return this.http.get(`${baseUrl}tournament?page=1`).pipe(
+  getIndexTournament(params: any) {
+    return this.http.get(`${baseUrl}tournament?`, { params }).pipe(
       map(
         (body: any) => {
-          return body.resultIndex.data;
+          return body.resultIndex;
         },
         (catchError) => {
           console.log(catchError);
@@ -57,14 +56,5 @@ export class TournamentService {
     return this.http.get(
       `https://s1mple-tours-be.herokuapp.com/tournament?page=1`
     );
-  }
-  private getPaginationData(response: any) {
-    return response.resultIndex.pagination;
-  }
-  getPagination(params: any): any {
-    return this.http.get(`${environment.serverUrl}tournament`, { params }).pipe(map(this.getPaginationData));
-  }
-  getAll(params): Observable<any> {
-    return this.http.get(baseUrl, { params });
   }
 }
